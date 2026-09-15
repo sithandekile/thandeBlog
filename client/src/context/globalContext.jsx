@@ -1,9 +1,12 @@
 import { createContext, useContext, useState, useEffect } from 'react';
+import { posts as localPosts } from '../data';
 
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [posts,setPosts]=useState([])
+  const [posts, setPosts] = useState([]);
+  const [postsLoading, setPostsLoading] = useState(true);
+  const [postsError, setPostsError] = useState('');
   const [darkMode, setDarkMode] = useState(
     () => localStorage.getItem("theme") === "dark"
   );
@@ -20,11 +23,28 @@ export const ThemeProvider = ({ children }) => {
     }
   }, [darkMode]);
 
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        setPostsLoading(true);
+        setPostsError('');
+
+        setPosts(localPosts);
+      } catch {
+        setPostsError('Unable to load posts.');
+      } finally {
+        setPostsLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, []);
+
   const toggleThemeMode = () => setDarkMode(prev => !prev);
 
 
   return (
-    <ThemeContext.Provider value={{ darkMode, toggleThemeMode,posts }}>
+    <ThemeContext.Provider value={{ darkMode, toggleThemeMode, posts, postsLoading, postsError }}>
       {children}
     </ThemeContext.Provider>
   );
