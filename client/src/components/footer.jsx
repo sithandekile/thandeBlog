@@ -10,11 +10,11 @@ export default function Footer() {
        </div>
        <div className="flex justify-between items-center">
           <ul className="flex flex-wrap gap-4">
-            <Link to="/"><li>Home</li></Link>
-            <Link to="/blog"><li>Blog</li></Link>
-            <Link to="/about"><li>About Us</li></Link>
-            <Link to="/contact"><li>Contact us</li></Link>
-            <Link to="/security"><li>Privacy and Policy</li></Link>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/contact">Contact us</Link></li>
+            <li><Link to="/security">Privacy and Policy</Link></li>
           </ul>
           </div>
     </div>

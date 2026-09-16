@@ -4,10 +4,16 @@ import { Link } from 'react-router-dom'
 
 export const Hero = () => {
   return (
-    <div className='relative w-full' style={{backgroundImage:`url(${heroImage})`,
-    backgroundSize:'cover',backgroundPosition:'center',
-     height:'100vh',backgroundRepeat:'no-repeat'}}>
-        <div className='h-full w-full px-5 pt-20 text-white md:w-1/2 md:pl-11'>
+    <div className='relative h-screen w-full overflow-hidden'>
+        <img
+          src={heroImage}
+          alt=""
+          aria-hidden="true"
+          loading="eager"
+          fetchPriority="high"
+          className='absolute inset-0 h-full w-full object-cover object-center'
+        />
+        <div className='relative z-10 h-full w-full px-5 pt-20 text-white md:w-1/2 md:pl-11'>
         <h1 className='font-bold text-2xl md:text-4xl text-[#5E5E5E]'>
             Discover Fresh Perspectives, <span className='text-orange-700'>
             Thoughtful Stories</span>, and Practical Ideas That Inspire Curiosity
