@@ -1,17 +1,19 @@
-import React from 'react'
+import { lazy, Suspense } from 'react'
 import { Hero } from '../components/hero'
-import Categories from '../components/categories'
-import { Aboutus } from '../components/aboutus'
-import { LatestPosts } from '../components/latestPosts'
+const Categories = lazy(() => import('../components/categories'))
+const Aboutus = lazy(() => import('../components/aboutus').then((module) => ({ default: module.Aboutus })))
+const LatestPosts = lazy(() => import('../components/latestPosts').then((module) => ({ default: module.LatestPosts })))
 
 
 export default function Home() {
   return (
       <main>
         <Hero/>
-        <Categories/>
-        <LatestPosts/>
-        <Aboutus/>
+        <Suspense fallback={<p className="p-6 text-center">Loading more stories...</p>}>
+          <Categories/>
+          <LatestPosts/>
+          <Aboutus/>
+        </Suspense>
       </main>
   )
 }
