@@ -9,7 +9,7 @@ export default function Navbar() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className=" bg-sky-950 text-white dark:bg-slate-900 dark:text-gray-100 p-4 shadow-lg flex flex-wrap items-center justify-between gap-3 sticky top-0 left-0 right-0 z-10">
+    <header className="z-20 bg-sky-950 text-white dark:bg-slate-900 dark:text-gray-100 p-4 shadow-lg flex flex-wrap items-center justify-between gap-3 sticky top-0 left-0 right-0">
       <div className="px-2 md:px-6">
         <h1 className="text-2xl md:text-3xl font-bold rounded-full "><Link to="/">MYBLOG</Link></h1>
         </div>
