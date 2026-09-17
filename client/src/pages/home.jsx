@@ -7,13 +7,13 @@ const LatestPosts = lazy(() => import('../components/latestPosts').then((module)
 
 export default function Home() {
   return (
-      <main>
+      <>
         <Hero/>
         <Suspense fallback={<p className="p-6 text-center">Loading more stories...</p>}>
           <Categories/>
           <LatestPosts/>
           <Aboutus/>
         </Suspense>
-      </main>
+      </>
   )
 }
