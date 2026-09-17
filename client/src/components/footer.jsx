@@ -18,14 +18,14 @@ export default function Footer() {
           </ul>
           </div>
     </div>
-    <div className='flex flex-col gap-4 dark:bg-slate-900 md:flex-row items-center md:justify-between my-6 md:my-10 mx-0 md:mx-20 py-8 px-5 bg-white/20'>
-      <h2 className='font-bold text-center md:text-left md:text-3xl text-xl'>Subscribe to our news letter to get latest updates</h2>
+    <div className='flex flex-col gap-4 bg-slate-800 dark:bg-slate-900 md:flex-row items-center md:justify-between my-6 md:my-10 mx-0 md:mx-20 py-8 px-5'>
+      <h2 className='font-bold text-center text-white md:text-left md:text-3xl text-xl'>Subscribe to our news letter to get latest updates</h2>
       <input type='email'name='email' onChange={(e)=>setEmail(e.target.value)} placeholder='Enter Your Email'
-      className='p-2 bg-white/30 w-full md:w-1/3'/>
-      <Link to="/subscribe" className='bg-orange-700 dark:bg-orange-800 p-2 rounded-md'>Subscribe</Link>
+      className='p-2 bg-white text-slate-900 w-full md:w-1/3'/>
+      <Link to="/subscribe" className='bg-orange-800 p-2 rounded-md text-white'>Subscribe</Link>
       
     </div>
-    <p className="text-center text-gray-500 dark:text-gray-400">
+    <p className="text-center text-gray-300 dark:text-gray-300">
        © {new Date().getFullYear()} Thande's Blog App. All rights reserved.
     </p>
  </footer>

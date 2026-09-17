@@ -8,7 +8,7 @@ export const Aboutus = () => {
             <h1 className='font-extralight '>About us</h1>
               <h2 className='font-bold text-2xl md:text-3xl leading-10'>A space for thoughtful stories and ideas that stay with you</h2>
               <p>We bring together honest experiences, fresh perspectives, and lessons worth sharing. Our blog is for curious readers who enjoy discovering meaningful stories and finding inspiration in everyday life.</p>
-                 <Link to="/about" className='bg-orange-700 dark:bg-orange-800 p-2 rounded-md mt-4 inline-block'>Learn About Us</Link>
+                 <Link to="/about" className='bg-orange-800 p-2 rounded-md mt-4 inline-block text-white'>Learn About Us</Link>
        </div>
        <div>
            <h1 className='font-extralight'>Our Mission</h1>
