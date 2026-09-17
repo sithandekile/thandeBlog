@@ -11,6 +11,24 @@ export const categories = [
   { name: "Nature", icon:  Trees, count: 67 },
 ];
 
+export const teamMembers = [
+  {
+    id: 1,
+    name: "Sithandekile Thande",
+    role: "Founder and Editor",
+  },
+  {
+    id: 2,
+    name: "The Writers",
+    role: "Contributors and Researchers",
+  },
+  {
+    id: 3,
+    name: "The Creative Team",
+    role: "Design and Visuals",
+  },
+];
+
 export const posts = [
   {
     id: 1,

@@ -1,4 +1,4 @@
-import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5"
+import { Moon, Sun } from "lucide-react"
 import { useglobal } from "../context/globalContext"
 
 export default function ThemeToggle(){
@@ -11,7 +11,7 @@ export default function ThemeToggle(){
             aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
             title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
         >
-            {darkMode ? <IoSunnyOutline aria-hidden="true" /> : <IoMoonOutline aria-hidden="true" />}
+            {darkMode ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}
         </button>
     )
 }

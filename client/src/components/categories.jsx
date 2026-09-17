@@ -15,12 +15,12 @@ const Categories = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-6 gap-4 ">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-5">
           {categories.map((category) => (
             <Link
               key={category.name}
               to  ={`blog/${category.name.toLowerCase()}`}
-              className="group block p-6 rounded-2xl border border-orange-500 card-glow text-center hover:border-orange-600 cursor-pointer"
+              className="group block w-full rounded-2xl border border-orange-500 p-6 text-center card-glow hover:border-orange-600 cursor-pointer"
             >
               <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-orange-700 flex items-center justify-center group-hover:bg-orange-600">
                 <category.icon className="w-7 h-7 text-white" />
