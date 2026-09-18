@@ -6,6 +6,7 @@ const Blog = lazy(() => import('./pages/blog').then((module) => ({ default: modu
 const About = lazy(() => import('./pages/about').then((module) => ({ default: module.About })));
 const Contact = lazy(() => import('./pages/contact').then((module) => ({ default: module.Contact })));
 const Privacy = lazy(() => import('./pages/privacy').then((module) => ({ default: module.Privacy })));
+const CategoryPage = lazy(() => import('./pages/categoryPage').then((module) => ({ default: module.CategoryPage })));
 // import { Subscribe } from './pages/subscribe';
 // import Login from './pages/login';
 // import Signup from './pages/signup';
@@ -23,7 +24,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/security" element={<Privacy />} />
-          <Route path="/blog/:category" element={<Privacy />} />
+          <Route path="/blog/:category" element={<CategoryPage />} />
           {/* <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} /> */}
         </Routes>
