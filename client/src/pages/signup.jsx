@@ -1,4 +1,4 @@
-import { SignUp } from '@clerk/clerk-react';
+import { SignUp } from '@clerk/react';
 import { Link } from 'react-router-dom';
 
 export default function Signup() {
@@ -12,11 +12,11 @@ export default function Signup() {
       <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
         <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
           <SignUp
-            routing="path"
-            path="/sign-up"
-            signInUrl="/sign-in"
-            afterSignUpUrl="/share-story"
-          />
+              routing="path"
+              path="/sign-up"
+              signInUrl="/sign-in"
+              fallbackRedirectUrl="/share-story"
+            />
         </div>
 
         <aside className="rounded-2xl bg-sky-50 p-6 dark:bg-slate-900">

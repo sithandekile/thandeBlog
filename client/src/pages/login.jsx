@@ -1,4 +1,4 @@
-import { SignIn } from '@clerk/clerk-react';
+import { SignIn } from '@clerk/react';
 import { Link } from 'react-router-dom';
 
 export default function Login() {
@@ -15,7 +15,7 @@ export default function Login() {
             routing="path"
             path="/sign-in"
             signUpUrl="/sign-up"
-            afterSignInUrl="/share-story"
+            fallbackRedirectUrl="/share-story"
           />
         </div>
 
