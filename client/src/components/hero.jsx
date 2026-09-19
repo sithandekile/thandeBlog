@@ -27,6 +27,9 @@ export const Hero = () => {
           <Link to='/blog' className='inline-flex items-center justify-center rounded bg-orange-700 px-6 py-3 font-medium text-white transition-colors hover:bg-orange-600'>
             Explore Articles
           </Link>
+          <Link to='/share-story' className='font-medium text-slate-800 underline underline-offset-4 transition-colors hover:text-orange-700'>
+            Share Your Story
+          </Link>
           <a href='#categories' className='font-medium text-slate-800 underline underline-offset-4 transition-colors hover:text-orange-700'>
             Browse Categories
           </a>
