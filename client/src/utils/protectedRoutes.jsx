@@ -1,5 +1,5 @@
 import { Navigate, useLocation } from 'react-router-dom';
-import { useAuth } from '@clerk/clerk-react';
+import { useAuth } from '@clerk/react';
 
 export const ProtectedRoutes = ({ children }) => {
   const { isLoaded, isSignedIn } = useAuth();
