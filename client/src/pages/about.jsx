@@ -41,6 +41,9 @@ export const About = () => {
           <Link to='/contact' className='inline-flex items-center justify-center rounded border border-orange-800 px-6 py-3 font-medium text-orange-800 transition-colors hover:bg-orange-800 hover:text-white'>
             Contact Us
           </Link>
+          <Link to='/share-story' className='font-medium text-orange-800 underline underline-offset-4 hover:text-orange-700'>
+            Share Your Story
+          </Link>
         </div>
         <div className='grid grid-cols-1 items-start gap-10 bg-[#fef5f6] px-5 py-12 dark:bg-slate-900 md:grid-cols-2 md:px-10'>
           <div className='order-1'>
